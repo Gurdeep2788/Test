@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="First_Package.Static_Method"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="com.ResearchPoint.pages.Prospects"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthStyle"/>
+<fullyQualifiedTypeName name="com.ResearchPoint.pages.AddAssets"/>
+<fullyQualifiedTypeName name="com.ResearchPoint.pages.EditAssets"/>
+<fullyQualifiedTypeName name="com.ResearchPoint.pages.ConfirmAssets"/>
+<fullyQualifiedTypeName name="com.ResearchPoint.pages.ClearStatusAssets"/>
+<fullyQualifiedTypeName name="com.ResearchPoint.pages.DeleteAssets"/>
+<fullyQualifiedTypeName name="com.ResearchPoint.pages.MarkHistoricalCurrentAssets"/>
+<fullyQualifiedTypeName name="org.testng.Assert"/>
+<fullyQualifiedTypeName name="Library.Wait"/>
+<fullyQualifiedTypeName name="org.testng.annotations.AfterTest"/>
+<fullyQualifiedTypeName name="Library.Browsers"/>
+<fullyQualifiedTypeName name="com.ResearchPoint.pages.WealthAndRatingsPage"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+</qualifiedTypeNameHistroy>

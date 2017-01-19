@@ -1,0 +1,156 @@
+/**
+ * 
+ */
+package com.ResearchPoint.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+
+import Library.Browsers;
+import Library.Wait;
+
+/**
+ * @author gurdeep.singh
+ *
+ */
+
+/*This class contains methods to add all the Assets 
+ * Real estate
+ * Businesses
+ * Securities
+ * Wealth indicators
+ * Income/compensation
+ * Other assets
+ * */
+public class AddAssets extends Browsers {
+
+	//Method to add manually Real estate record
+	public static void addRealEstate() throws Exception
+	{
+		Wait.waitUntilElementLocated("//tr[td/div[text()='Real estate ']]/td/table/tbody/tr/td/em/button[text()='Add']", 30);
+		driver.findElement(By.xpath("//tr[td/div[text()='Real estate ']]/td/table/tbody/tr/td/em/button[text()='Add']")).click();
+		Wait.waitUntilElementLocated("//input[contains(@id,'SOURCE_value')]", 30);
+		driver.findElement(By.xpath("//input[contains(@id,'SOURCE_value')]")).sendKeys("Test");	
+		driver.findElement(By.xpath("//*[contains(@id,'PROPADDRESS_value')]")).sendKeys("Test Address");
+		driver.findElement(By.xpath("//input[contains(@id,'PROPCITY_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//input[contains(@id,'PROPSTATE_value')]")).sendKeys("TX");
+		driver.findElement(By.xpath("//input[contains(@id,'PROPZIP_value')]")).sendKeys("12345");
+		driver.findElement(By.xpath("//input[contains(@id,'OWNER_value')]")).sendKeys("Test Owner");
+		driver.findElement(By.xpath("//input[contains(@id,'OWNERCAREOFNAME_value')]")).sendKeys("Test Care of name");
+		driver.findElement(By.xpath("//*[contains(@id,'MAILINGADDRESS_value')]")).sendKeys("Test Mailing Address");
+		WebElement webElement = driver.findElement(By.xpath("//*[contains(@id,'MAILINGADDRESS_value')]"));
+		webElement.sendKeys(Keys.TAB);		
+		driver.findElement(By.xpath("//input[contains(@id,'SUMMARYSALESVALUE_value')]")).sendKeys("10000");
+		WebElement webElement1 = driver.findElement(By.xpath("//input[contains(@id,'SUMMARYSALESRECORDINGDATE_value')]"));
+		webElement1.sendKeys(Keys.TAB);
+		driver.findElement(By.xpath("//input[contains(@id,'PROPERTYVALUATION_value')]")).sendKeys("20000");
+		driver.findElement(By.xpath("//button[text()='Save']")).click();
+		Wait.wait(5000);
+	}
+
+	//Method to add manually Business record
+	public static void addBusinesses() throws Exception
+	{		
+		Wait.waitUntilElementLocated("//tr[td/div[text()='Businesses ']]/td/table/tbody/tr/td/em/button[text()='Add']", 30);
+		driver.findElement(By.xpath("//tr[td/div[text()='Businesses ']]/td/table/tbody/tr/td/em/button[text()='Add']")).click();
+		Wait.waitUntilElementLocated("//input[contains(@id,'SOURCE_value')]", 10);
+		driver.findElement(By.xpath("//input[contains(@id,'SOURCE_value')]")).sendKeys("Test");  //Source
+		driver.findElement(By.xpath("//input[contains(@id,'COMPANY_value')]")).sendKeys("Business Company");//Company
+		driver.findElement(By.xpath("//input[contains(@id,'LINE_OF_BUSINESS_DESCRIPTION_value')]")).sendKeys("Business Description");//Description
+		driver.findElement(By.xpath("//*[contains(@id,'LINE1_value')]")).sendKeys("Test Company Address");//COMPANY Address
+		driver.findElement(By.xpath("//input[contains(@id,'FULLNAME_value')]")).sendKeys("Test");//Name
+		driver.findElement(By.xpath("//input[contains(@id,'TITLE_value')]")).sendKeys("Test Title");//Job Title
+		WebElement webElement = driver.findElement(By.xpath("//input[contains(@id,'TITLE_value')]"));
+		webElement.sendKeys(Keys.TAB);		
+		driver.findElement(By.xpath("//input[contains(@id,'PERCENTAGE_value')]")).sendKeys("80");//% Ownership
+		driver.findElement(By.xpath("//input[contains(@id,'HELDCODE_value')]")).sendKeys("Private");//Held	
+		driver.findElement(By.xpath("//Span[text()='Valuation']")).click();
+		WebElement webElement1 = driver.findElement(By.xpath("//input[contains(@id,'_RATIO_value')]"));
+		webElement1.sendKeys(Keys.TAB);		
+		driver.findElement(By.xpath("//input[contains(@id,'VALUATION_value')]")).sendKeys("100000");//Held	
+		driver.findElement(By.xpath("//button[text()='Save']")).click();
+		Wait.wait(5000);
+	}
+
+	//Method to add manually Securities record
+	public static void addSecurities() throws Exception
+	{
+		Wait.waitUntilElementLocated("//tr[td/div[text()='Securities ']]/td/table/tbody/tr/td/em/button[text()='Add']", 30);
+		driver.findElement(By.xpath("//tr[td/div[text()='Securities ']]/td/table/tbody/tr/td/em/button[text()='Add']")).click();
+		Wait.waitUntilElementLocated("//input[contains(@id,'_SOURCE_value')]", 30);
+		driver.findElement(By.xpath("//input[contains(@id,'_SOURCE_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//input[contains(@id,'_FULLNAME_value')]")).sendKeys("Test Name");
+		driver.findElement(By.xpath("//input[contains(@id,'_FILERID_value')]")).sendKeys("30");
+		driver.findElement(By.xpath("//input[contains(@id,'_RELATIONSHIP_value')]")).sendKeys("Single");
+		WebElement webElement = driver.findElement(By.xpath("//input[contains(@id,'_REPORTDATEDIRECT_value')]"));
+		webElement.sendKeys(Keys.TAB);	
+		driver.findElement(By.xpath("//input[contains(@id,'_AMOUNTOWNEDDIRECT_value')]")).sendKeys("10");
+		WebElement webElement1 = driver.findElement(By.xpath("//input[contains(@id,'_AMOUNTOWNEDDIRECT_value')]"));
+		webElement1.sendKeys(Keys.TAB);
+		driver.findElement(By.xpath("//input[contains(@id,'_PRICEDIRECT_value')]")).sendKeys("10000");	
+		driver.findElement(By.xpath("//*[contains(@id,'_CNOTES_value')]")).sendKeys("Test Notes");
+		driver.findElement(By.xpath("//button[text()='Save']")).click();
+		Wait.wait(5000);
+	}
+
+	//Method to add manually Wealth indicator record
+	public static void addWealthIndicator() throws Exception
+	{
+		Wait.waitUntilElementLocated("//tr[td/div[text()='Wealth indicators ']]/td/table/tbody/tr/td/em/button[text()='Add']", 30);
+		driver.findElement(By.xpath("//tr[td/div[text()='Wealth indicators ']]/td/table/tbody/tr/td/em/button[text()='Add']")).click();
+		Wait.waitUntilElementLocated("//input[contains(@id,'_SOURCE_value')]", 30);
+		driver.findElement(By.xpath("//input[contains(@id,'_SOURCE_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//input[contains(@id,'_FULLNAME_value')]")).sendKeys("Test Name");
+		driver.findElement(By.xpath("//input[contains(@id,'_AGE_value')]")).sendKeys("10");
+		driver.findElement(By.xpath("//input[contains(@id,'_MARITAL_value')]")).sendKeys("Single");
+		driver.findElement(By.xpath("//*[contains(@id,'_WEALTHIND_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//*[contains(@id,'_CNOTES_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//*[contains(@id,'_INCOME_value')]")).sendKeys("1000");
+		driver.findElement(By.xpath("//*[contains(@id,'_DONOR_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//button[text()='Save']")).click();
+		Wait.wait(5000);
+	}
+
+	//Method to add manually Income/compensation record
+	public static void addIncomeCompensation() throws Exception
+	{
+		Wait.waitUntilElementLocated("//tr[td/div[text()='Income/compensation ']]/td/table/tbody/tr/td/em/button[text()='Add']", 30);
+		driver.findElement(By.xpath("//tr[td/div[text()='Income/compensation ']]/td/table/tbody/tr/td/em/button[text()='Add']")).click();
+		Wait.waitUntilElementLocated("//input[contains(@id,'_SOURCE_value')]", 30);
+		driver.findElement(By.xpath("//input[contains(@id,'_SOURCE_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//input[contains(@id,'_COMPANY_value')]")).sendKeys("Test Company");
+		driver.findElement(By.xpath("//input[contains(@id,'_BB_FULLNAME_value')]")).sendKeys("Test Name");
+		driver.findElement(By.xpath("//input[contains(@id,'_LONGTITLE_value')]")).sendKeys("Test Title");	
+		WebElement webElement = driver.findElement(By.xpath("//input[contains(@id,'_LATESTCOMPENSATIONYEAR_value')]"));
+		webElement.sendKeys(Keys.TAB);
+		driver.findElement(By.xpath("//input[contains(@id,'_LATESTFISCALYEARSALARY_value')]")).sendKeys("100000");	
+		WebElement webElement1 = driver.findElement(By.xpath("//input[contains(@id,'_LATESTFISCALYEARSALARY_value')]"));
+		webElement1.sendKeys(Keys.TAB);	
+		driver.findElement(By.xpath("//input[contains(@id,'_LATESTFISCALYEARBONUS_value')]")).sendKeys("50000");
+		driver.findElement(By.xpath("//*[contains(@id,'_BIOGRAPHY_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//*[contains(@id,'_CNOTES_value')]")).sendKeys("Test Notes");
+		driver.findElement(By.xpath("//button[text()='Save']")).click();
+		Wait.wait(5000);
+	}
+
+	//Method to add manually Other asset record
+	public static void addOtherAssets() throws Exception
+	{
+		Wait.waitUntilElementLocated("//tr[td/div[text()='Other assets ']]/td/table/tbody/tr/td/em/button[text()='Add']", 30);
+		driver.findElement(By.xpath("//tr[td/div[text()='Other assets ']]/td/table/tbody/tr/td/em/button[text()='Add']")).click();
+		Wait.waitUntilElementLocated("//input[contains(@id,'_SOURCE_value')]", 30);
+		driver.findElement(By.xpath("//input[contains(@id,'_SOURCE_value')]")).sendKeys("Test");
+		driver.findElement(By.xpath("//input[contains(@id,'_DESCRIPTION_value')]")).sendKeys("Description");
+		WebElement webElement1 = driver.findElement(By.xpath("//input[contains(@id,'_DESCRIPTION_value')]"));
+		webElement1.sendKeys(Keys.TAB);	
+		driver.findElement(By.xpath("//input[contains(@id,'_VALUE_value')]")).sendKeys("300000");
+		driver.findElement(By.xpath("//*[contains(@id,'_NOTES_value')]")).sendKeys("Test Notes");
+		driver.findElement(By.xpath("//button[text()='Save']")).click();
+		Wait.wait(5000);
+	}
+
+
+
+
+}

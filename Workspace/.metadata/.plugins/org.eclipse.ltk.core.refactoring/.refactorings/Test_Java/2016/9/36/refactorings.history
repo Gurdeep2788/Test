@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;IEDriverServer_x64_2.53.1&apos; to &apos;ResearchPoint_Automation&apos;&#x0D;&#x0A;- Original project: &apos;Test_Java&apos;&#x0D;&#x0A;- Destination element: &apos;ResearchPoint_Automation&apos;&#x0D;&#x0A;- Original element: &apos;IEDriverServer_x64_2.53.1&apos;" description="Copy folder" destination="=ResearchPoint_Automation" element1="IEDriverServer_x64_2.53.1" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1472913791252" units="0" version="1.0"/>
+</session>

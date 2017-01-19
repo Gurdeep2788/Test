@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package com.ResearchPoint.pages;
+
+import org.openqa.selenium.By;
+
+import Library.Browsers;
+import Library.Wait;
+
+/**
+ * @author gurdeep.singh
+ *
+ */
+public class NoStatusGiving extends Browsers{
+	public static void noStatusPhilanthropicGift() throws InterruptedException
+	{
+		Wait.waitUntilElementLocated("//tbody/tr[td/div[text()='Philanthropic gifts ']]/td[2]/table/tbody/tr/td/em/button", 30);
+		driver.findElement(By.xpath("//tbody/tr[td/div[text()='Philanthropic gifts ']]/td[2]/table/tbody/tr/td/em/button")).click();
+		driver.findElement(By.xpath("//div[div/div/table/tbody/tr/td/table/tbody/tr/td/div[text()='Philanthropic gifts ']]/div[2]/div/div/div/div/div/div/div/div/div/div/div/table/tbody/tr/td[2]/div/button")).click();	
+		driver.findElement(By.xpath("//div[div/div/table/tbody/tr/td/table/tbody/tr/td/div[text()='Philanthropic gifts ']]/div[2]/div/div/div/div/div/div/div/div/div/div/div/table/tbody/tr/td/div/div/div/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/em/button[text()='No Status']")).click();						
+		Wait.wait(10000);
+	}
+
+	public static void noStatusPoliticalDonation() throws InterruptedException
+	{
+		Wait.waitUntilElementLocated("//tbody/tr[td/div[text()='Political donations ']]/td[2]/table/tbody/tr/td/em/button", 30);
+		driver.findElement(By.xpath("//tbody/tr[td/div[text()='Political donations ']]/td[2]/table/tbody/tr/td/em/button")).click();
+		driver.findElement(By.xpath("//div[div/div/table/tbody/tr/td/table/tbody/tr/td/div[text()='Political donations ']]/div[2]/div/div/div/div/div/div/div/div/div/div/div/table/tbody/tr/td[2]/div/button")).click();	
+		driver.findElement(By.xpath("//div[div/div/table/tbody/tr/td/table/tbody/tr/td/div[text()='Political donations ']]/div[2]/div/div/div/div/div/div/div/div/div/div/div/table/tbody/tr/td/div/div/div/table/tbody/tr/td/table/tbody/tr/td/table//tbody/tr/td/em/button[text()='No Status']")).click();				
+		Wait.wait(10000);
+	}
+
+}

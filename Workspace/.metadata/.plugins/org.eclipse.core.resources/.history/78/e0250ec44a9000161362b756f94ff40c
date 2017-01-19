@@ -1,0 +1,57 @@
+package com.ResearchPoint.pages;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import Library.Browsers;
+import Library.Wait;
+
+public class LoginPage extends Browsers{
+
+
+	By Username = By.id("user_login");
+	By Password = By.id("user_pass");
+	By Login= By.id("wp-submit");    
+	public void loginResearchPoint() throws Exception
+	{
+		Browsers.selectBrowser();	
+		File src = new File("C:\\Selenium\\Workspace\\ResearchPoint_Automation\\Excel Data\\TestData.xlsx");
+		FileInputStream fis = new FileInputStream(src);
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet LoginCredentials = wb.getSheetAt(1);		
+		String URL=LoginCredentials.getRow(0).getCell(0).getStringCellValue();								
+		Wait.wait(2000);
+		
+		if(browser.equalsIgnoreCase("Firefox"))
+		{
+			driver.get(URL);							
+			//driver.findElement(By.xpath("//img[@title='Start ResearchPoint']")).click();			
+			Runtime.getRuntime().exec("C:\\Selenium\\Workspace\\ResearchPoint_Automation\\AutoIT Script\\Login.exe");
+			Wait.wait(5000);
+		}
+		else if(browser.equalsIgnoreCase("Chrome"))
+		{
+			driver.get(URL);							
+			driver.findElement(By.xpath("//img[@title='Start ResearchPoint']")).click();		
+			Wait.wait(5000);
+			Runtime.getRuntime().exec("C:\\Selenium\\Workspace\\ResearchPoint_Automation\\AutoIT Script\\LoginChrome3.exe");
+			Wait.wait(5000);
+		}
+		else if(browser.equalsIgnoreCase("IE"))
+		{
+			driver.get(URL);
+			driver.findElement(By.xpath("//img[@title='Start ResearchPoint']")).click();
+			Runtime.getRuntime().exec("C:\\Selenium\\Workspace\\ResearchPoint_Automation\\AutoIT Script\\LoginIE.exe");
+			Wait.wait(5000);
+		}
+			
+	}
+
+
+
+}
